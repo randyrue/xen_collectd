@@ -1,0 +1,6 @@
+nfs_ops                 read:COUNTER:0:4294967295, write:COUNTER:0:4294967295, getattr:COUNTER:0:4294967295, setattr:COUNTER:0:4294967295
+ndmp			sessions:GAUGE:0:U, backup:GAUGE:0:U, restore:GAUGE:0:U
+cpu_usage		busy:GAUGE:0:100, idle:GAUGE:0:100
+network_io		octets_in:DERIVE:0:4294967295, octets_out:DERIVE:0:4294967295, tx_errors:DERIVE:0:4294967295, rx_errors:DERIVE:0:4294967295
+
+hrProcessorLoad         percent:GAUGE:0:U

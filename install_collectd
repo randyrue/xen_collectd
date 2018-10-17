@@ -1,0 +1,24 @@
+#!/bin/bash
+# quick/dirty installer specifically for xenserver72 and our graphite setup
+
+# uninstall anything wedged
+yum remove -y scharp-collectd collectd-ping
+
+# install the package
+yum install -y collectd collectd-snmp
+
+# copy the plugin configs
+cp conf/* /etc/collectd.d/
+chown root:root /etc/collectd.d/*
+
+# copy the config
+cp collectd.conf /etc/
+chown root:root /etc/collectd.conf
+
+# copy the types files
+cp types/* /usr/share/collectd/
+chown root:root /usr/share/collectd/*
+
+# restart the daemon
+systemctl restart collectd
+
